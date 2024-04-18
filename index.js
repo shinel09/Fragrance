@@ -31,7 +31,10 @@ app.use("/api/v1/category", categoryRouter);
 app.use("/api/v1/product", productRouter);
 app.use("/api/v1/order", orderRouter);
 
-
+app.use("/",(req, res)=>{
+  console.log("This is home page");
+  res.send("This is home page");
+}); 
 
 
 app.listen(port, () => {
